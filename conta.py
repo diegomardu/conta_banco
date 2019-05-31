@@ -1,14 +1,7 @@
 class conta:
-    def __init__(self,titular,numero,saldo,limite):
-        self._titular = titular
+    def __init__(self,numero = 0,saldo = 0):
         self._numero = numero
         self._saldo = saldo
-        self._limite = limite
-
-    def setTitular(self,titular):
-        self._titular = titular
-    def getTitular(self):
-        return self._titular
 
     def setNumero(self,numero):
         self._numero = numero
@@ -20,21 +13,16 @@ class conta:
     def getSaldo(self):
         return self._saldo
 
-    def setLimite(self,limite):
-        self._limite = limite
-    def getLimite(self):
-        return self._limite
+    def sacar(self,saque):
+        if self._saldo > saque:
+            self._saldo -= saque
 
-    def deposito(self,valor):
-        self._saldo += valor
-    def saque(self,valor):
+    def despositar(self,deposito):
+        self._saldo += deposito
+
+    def transferencia(self,valor):
         if self._saldo > valor:
             self._saldo -= valor
-        else:
-            print("Saldo insuficiente para saque")
-    def transferencia(self,destino,valor):
-        if self._saldo >= valor:
-            self._saldo -= valor
-            destino._saldo += valor
-        else:
-            print("Saldo insuficiente para transferencia")
+
+
+

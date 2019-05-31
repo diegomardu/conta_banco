@@ -1,8 +1,7 @@
-from conta import conta
-
-c1 = conta("Diego Martins",1,1250,10000)
-c2 = conta("Jose Diogo",2,450,10000)
-
-c1.transferencia(c2,2000)
-print(c1.getSaldo())
-print(c2.getSaldo())
+from conta import *
+cliente = conta()
+print(cliente.getSaldo())
+cliente.despositar(250)
+print(cliente.getSaldo())
+cliente.sacar(200)
+print(cliente.getSaldo())

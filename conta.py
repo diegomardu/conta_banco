@@ -8,8 +8,6 @@ class conta:
     def getNumero(self):
         return self._numero
 
-    def setSaldo(self,saldo):
-        self._saldo = saldo
     def getSaldo(self):
         return self._saldo
 

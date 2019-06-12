@@ -10,7 +10,7 @@ class conta_corrente(conta):
         self._limite = limite
 
     def sacar(self,saque):
-        if self.getSaldo() + self.getLimite() > saque:
+        if self.getSaldo() + self.getLimite() >= saque:
             self._saldo -= saque
             return True
         else:

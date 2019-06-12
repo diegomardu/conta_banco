@@ -12,8 +12,11 @@ class conta:
         return self._saldo
 
     def sacar(self,saque):
-        if self._saldo > saque:
+        if self._saldo >= saque:
             self._saldo -= saque
+            return True
+        else:
+            return False
 
     def despositar(self,deposito):
         self._saldo += deposito

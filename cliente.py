@@ -18,15 +18,6 @@ class cliente:
     def addConta(self,conta):
         self._contas.append(conta)
 
-    def buscaConta(self,numero):
-
-
-c = cliente()
-c.setNome("Diego")
-c.setCPF("06407248418")
-print(c.getNome(),int(c.getCPF()))
-c1 = conta(1)
-c.addConta(c1)
 
 
 

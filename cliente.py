@@ -1,4 +1,6 @@
 from conta import *
+from conta_corrente import *
+from conta_popanca import *
 class cliente:
     def __init__(self,nome = "",cpf = ""):
         self._nome = nome
@@ -17,6 +19,13 @@ class cliente:
 
     def addConta(self,conta):
         self._contas.append(conta)
+
+    def buscaContas(self,numero_conta):
+        for i in self._contas:
+            if i == numero_conta:
+                return True
+            else:
+                return False
 
 
 

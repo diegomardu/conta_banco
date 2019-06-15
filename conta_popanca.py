@@ -1,6 +1,6 @@
 from conta import *
 class conta_popanca(conta):
-    def __init__(self,numero,saldo,rendimento=0):
+    def __init__(self,numero,saldo,rendimento):
         super().__init__(numero,saldo)
         self._rendimento = rendimento
 

@@ -1,5 +1,5 @@
 class conta:
-    def __init__(self,numero = 0,saldo = 0):
+    def __init__(self,numero = 0, saldo = 0):
         self._numero = numero
         self._saldo = saldo
 
@@ -21,7 +21,7 @@ class conta:
     def despositar(self,deposito):
         self._saldo += deposito
 
-    def transferencia(self,valor):
+    def transferencia(self,valor,numero_conta):
         if self._saldo > valor:
             self._saldo -= valor
 

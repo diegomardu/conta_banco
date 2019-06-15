@@ -1,6 +1,6 @@
 from conta import *
 class conta_corrente(conta):
-    def __init__(self,numero=0,saldo=0,limite=100):
+    def __init__(self,numero,saldo,limite):
         super().__init__(numero,saldo)
         self._limite = limite
 
@@ -9,9 +9,9 @@ class conta_corrente(conta):
     def setLimite(self,limite):
         self._limite = limite
 
-    def sacar(self,saque):
-        if self.getSaldo() + self.getLimite() >= saque:
-            self._saldo -= saque
+    def sacar(self,valor):
+        if valor < self.getSaldo() + self.getLimite():
+            self._saldo -= valor
             return True
         else:
             return False

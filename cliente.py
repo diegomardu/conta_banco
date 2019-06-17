@@ -22,7 +22,7 @@ class cliente:
 
     def buscaContas(self,numero_conta):
         for i in self._contas:
-            if i == numero_conta:
+            if i.getNumero() == numero_conta:
                 return True
             else:
                 return False

@@ -11,5 +11,10 @@ while True:
         conta = conta()
         c.setNome(input("Informe nome do cliente:"))
         c.setCPF(int(input("Informe CPF do cliente:")))
-        conta.
-        busca = c.buscaContas()
+        conta.setNumero(int(input("Numero da conta:")))
+        c.addConta(conta)
+        busca = c.buscaContas(int(input("Informe numero da conta:")))
+        if busca:
+            print("Conta existente")
+        else:
+            print("Conta não localizada")

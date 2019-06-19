@@ -1,6 +1,6 @@
 from cliente import *
 class agencia:
-    def __init__(self,num_agencia):
+    def __init__(self,num_agencia=1):
         self._num_agencia = num_agencia
         self._clientes = []
 
@@ -14,4 +14,14 @@ class agencia:
             else:
                 return False
 
+ag = agencia()
+c = cliente()
+c.setCPF("064")
+c.setNome("Diego")
+ag.addCliente(c)
 
+busca = ag.buscaCliente("064")
+if busca:
+    print("Achou")
+else:
+    print("Deu ruim")

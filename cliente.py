@@ -21,12 +21,13 @@ class cliente:
         self._contas.append(conta)
 
     def buscaContas(self,numero_conta):
+        #busca = ""
         for i in self._contas:
             if i.getNumero() == numero_conta:
+                #print(i.getSaldo())
+                #busca += "Cliente:" + i.getNome() + "Numero da Conta:" + i.getCPF()
+                #return busca
                 return True
             else:
                 return False
-
-
-
 

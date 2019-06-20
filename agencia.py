@@ -8,9 +8,11 @@ class agencia:
         self._clientes.append(cliente)
 
     def buscaCliente(self,cpf):
+        busca = ""
         for i in self._clientes:
             if i.getCPF() == cpf:
-                return True
+                busca += "Cliente:" + i.getNome() + "\nCPF:" + i.getCPF()
+                return busca
             else:
                 return False
 
@@ -22,6 +24,6 @@ ag.addCliente(c)
 
 busca = ag.buscaCliente("064")
 if busca:
-    print("Achou")
+    print(busca)
 else:
-    print("Deu ruim")
+    print("Conta não localizada")

@@ -15,15 +15,3 @@ class agencia:
                 return busca
             else:
                 return False
-
-ag = agencia()
-c = cliente()
-c.setCPF("064")
-c.setNome("Diego")
-ag.addCliente(c)
-
-busca = ag.buscaCliente("064")
-if busca:
-    print(busca)
-else:
-    print("Conta não localizada")
